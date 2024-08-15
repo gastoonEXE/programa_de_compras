@@ -1,7 +1,10 @@
 class Wallet:
-
-    def __init__(self, owner):
-        self.set_owner(owner)
+    
+    from ownable import set_owner
+    
+    owner = None
+    def __init__(self, owner): #recibe el objeto User/Seller como "owner" 
+        self.set_owner(owner) #wallet.owner
         self.balance = 0
 
     def deposit(self, amount):
